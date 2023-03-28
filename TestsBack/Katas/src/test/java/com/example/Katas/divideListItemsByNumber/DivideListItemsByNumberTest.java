@@ -23,6 +23,18 @@ class DivideListItemsByNumberTest {
     //WHEN
         var sut = DivideListItemsByNumber.listItemIsDivisibleByNumber(list,2);
     //THEN
-        assertArrayEquals(result.toArray(), sut.toArray());
+        //assertArrayEquals(result.toArray(), sut.toArray());
+        assertEquals(result,sut);
+    }
+
+    @Test
+    void DivideListItemsByNumberReturnsListWithNumbersDivisibleBy3() {
+        //GIVEN
+        List<Integer> list = new ArrayList<Integer>(List.of(1,2,3,4,5,6,7,8,9,10));
+        List<Integer> result = new ArrayList<Integer>(List.of(3,6,9));
+        //WHEN
+        var sut = DivideListItemsByNumber.listItemIsDivisibleByNumber(list,3);
+        //THEN
+        assertEquals(result,sut);
     }
 }
