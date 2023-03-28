@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
@@ -21,7 +20,7 @@ public class FizzBuzzTest {
         var fizzBuzz = new FizzBuzz();
         //var fizzBuzz2 = new FizzBuzz();
         //When
-        var sut = fizzBuzz.execute(3);
+        var sut = fizzBuzz.fizzBuzzFunction(3);
         //Then
         assertEquals("Fizz", sut);
 
@@ -33,7 +32,7 @@ public class FizzBuzzTest {
         var fizzBuzz = new FizzBuzz();
 
         //When
-        var sut = fizzBuzz.execute(5);
+        var sut = fizzBuzz.fizzBuzzFunction(5);
         //Then
         assertEquals("Buzz", sut);
 
@@ -45,7 +44,7 @@ public class FizzBuzzTest {
         var fizzBuzz = new FizzBuzz();
 
         //When
-        var sut = fizzBuzz.execute(15);
+        var sut = fizzBuzz.fizzBuzzFunction(15);
         //Then
         assertEquals("FizzBuzz", sut);
 
@@ -57,7 +56,7 @@ public class FizzBuzzTest {
         var fizzBuzz = new FizzBuzz();
 
         //When
-        var sut = fizzBuzz.execute(14);
+        var sut = fizzBuzz.fizzBuzzFunction(14);
         //Then
         assertEquals("14", sut);
 
